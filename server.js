@@ -1,6 +1,3 @@
-app.get('/', (req, res) => {
-  res.status(200).send('OK');
-});
 
 const express = require('express');
 const line = require('@line/bot-sdk');
@@ -12,6 +9,11 @@ const config = {
   channelSecret: process.env.LINE_CHANNEL_SECRET
 };
 const client = new line.Client(config);
+
+app.get('/', (req, res) => {
+  res.status(200).send('OK');
+});
+
 
 // webhook
 app.post('/webhook', line.middleware(config), (req, res) => {
