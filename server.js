@@ -1,5 +1,5 @@
 app.get('/', (req, res) => {
-  res.send('OK');
+  res.status(200).send('OK');
 });
 
 const express = require('express');
