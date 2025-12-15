@@ -42,8 +42,8 @@ function handleEvent(event) {
   if (text === '提醒小卡') {
     return client.replyMessage(event.replyToken, {
       type: 'image',
-      originalContentUrl: 'https://drive.google.com/file/d/12gRTzEnCzVabuZucTw3f2fxAo_q47itd/view?usp=sharing.jpg',
-      previewImageUrl: 'https://drive.google.com/file/d/12gRTzEnCzVabuZucTw3f2fxAo_q47itd/view?usp=sharing.jpg'	
+      originalContentUrl: 'https://github.com/Wan-Ting-HSU/AI-ECG--PH/blob/main/%E6%8F%90%E7%A4%BA%E5%B0%8F%E5%8D%A1.png?raw=true',
+      previewImageUrl: 'https://github.com/Wan-Ting-HSU/AI-ECG--PH/blob/main/%E6%8F%90%E7%A4%BA%E5%B0%8F%E5%8D%A1.png?raw=true'	
     });
   }
 
