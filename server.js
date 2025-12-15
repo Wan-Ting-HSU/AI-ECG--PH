@@ -41,19 +41,9 @@ function handleEvent(event) {
   // ② 提醒小卡
   if (text === '提醒小卡') {
     return client.replyMessage(event.replyToken, {
-      type: 'text',
-      text:
-`【提醒小卡】
-
-檢查項目(符合其中一項)
-📌 NT-pro BNP升高 (提示心臟功能異常)
-📌 走路比同齡慢，或在平路上走路需停下來喘氣 (mMRC >=2)
-📌 聽診發現心雜音
-📌 休息血氧機血氧飽和度<95%
-📌 靜止心跳 > 100次/分
-
-👉會診心臟科(評估心臟超音波)
-👉會診胸腔科(評估肺功能)`
+      type: 'image',
+      originalContentUrl: 'https://drive.google.com/file/d/12gRTzEnCzVabuZucTw3f2fxAo_q47itd/view?usp=sharing.jpg',
+      previewImageUrl: 'https://drive.google.com/file/d/12gRTzEnCzVabuZucTw3f2fxAo_q47itd/view?usp=sharing.jpg'	
     });
   }
 
