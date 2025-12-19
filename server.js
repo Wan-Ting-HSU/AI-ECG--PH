@@ -61,6 +61,27 @@ function handleEvent(event) {
     });
   }
 
+  // 4 聯絡人
+  if (text === '聯絡人') {
+    return client.replyMessage(event.replyToken, {
+      type: 'text',
+      text:
+`【聯絡人】
+📌 Trial負責聯絡人：詹承翰醫師 6389 / 吳承學醫師 1211
+📌 AI-ECG系統聯絡人：徐婉庭技術員 0341 / 胡瑜峰醫師 1262`
+    });
+  }
+  // 5 轉介門診
+  if (text === '轉介門診') {
+    return client.replyMessage(event.replyToken, {
+      type: 'image',
+      originalContentUrl: 'https://github.com/Wan-Ting-HSU/AI-ECG--PH/blob/main/%E9%96%80%E8%A8%BA%E8%A1%A8.png?raw=true',
+      previewImageUrl: 'https://github.com/Wan-Ting-HSU/AI-ECG--PH/blob/main/%E9%96%80%E8%A8%BA%E8%A1%A8.png?raw=true'	
+    });
+  }
+
+
+
   return Promise.resolve(null);
 }
 
@@ -83,7 +104,19 @@ function buttonsMenu() {
           type: 'message',
           label: '外科醫師執行',
           text: '外科醫師執行'
+        },
+	{
+          type: 'message',
+          label: '轉介門診',
+          text: '轉介門診'
+        },
+	{
+          type: 'message',
+          label: '聯絡人',
+          text: '聯絡人'
         }
+
+
       ]
     }
   };
